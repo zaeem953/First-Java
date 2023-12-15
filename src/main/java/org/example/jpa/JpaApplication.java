@@ -74,6 +74,15 @@ public class JpaApplication {
 //		Iterable<User> delALL=userRepository.findAll();
 //		delALL.forEach(user -> System.out.println(user));
 //		userRepository.deleteAll(delALL);
+
+		List<User> allUser=userRepository.getAllUser();
+
+		allUser.forEach(user -> System.out.println(user));
+
+		System.out.println("--------------------------------------------------");
+		List<User> byCityUser=userRepository.getByCity("Lahore","Learning Devops");
+
+		byCityUser.forEach(user -> System.out.println(user));
 		System.out.println("done");
         }
 	}
